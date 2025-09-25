@@ -1,9 +1,9 @@
 abstract class Prenda {
-    protected String nombre;
-    protected String talla;
-    protected int precio;
+    String nombre;
+    String talla;
+    double precio;
 
-    public Prenda(String nombre, String talla, int precio) {
+    public Prenda(String nombre, String talla, double precio) {
         this.nombre = nombre;
         this.talla = talla;
         this.precio = precio;
@@ -17,5 +17,5 @@ abstract class Prenda {
 }
 
 interface Descuento {
-    int aplicarDescuento(int porcentaje);
+    double aplicarDescuento(double porcentaje);
 }

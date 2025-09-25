@@ -1,0 +1,18 @@
+class PrendaDeportiva extends Prenda implements Descuento {
+    private String deporte;
+
+    public PrendaDeportiva(String nombre, String talla, double precio, String deporte) {
+        super(nombre, talla, precio);
+        this.deporte = deporte;
+    }
+
+    @Override
+    public void mostrarInfo() {
+        System.out.println("Prenda deportiva: " + nombre + " para " + deporte + ", talla " + talla + ", precio $" + precio);
+    }
+
+    @Override
+    public double aplicarDescuento(double porcentaje) {
+        return precio - (precio * porcentaje / 100);
+    }
+}
